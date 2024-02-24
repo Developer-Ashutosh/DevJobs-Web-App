@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Kumbh Sans;
+    src: url('../KumbhSans.woff2');
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+._focus-hover {
+    @apply border-[3px] border-transparent border-dashed hover:border-main focus-within:border-main rounded outline-none transition-all duration-200
+}
+
+._form-card {
+    @apply flex items-center justify-between gap-4 h-full *:cursor-pointer _focus-hover px-2 max-[500px]:gap-3 max-[500px]:px-1.5 max-[476px]:w-full
+}
