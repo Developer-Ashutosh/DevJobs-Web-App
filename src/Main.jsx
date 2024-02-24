@@ -101,7 +101,7 @@ const Main = () => {
         }`}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
-        <span className="h-full w-full p-0.5 bg-main text-white text-xl font-extrabold rounded-full flex items-center justify-center">
+        <span className="h-full w-full p-1 bg-main text-white text-xl font-extrabold rounded-full flex items-center justify-center">
           &uarr;
         </span>
       </button>

@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Logo, PostDetails, Title } from "../index";
 
 const Card = ({
@@ -14,9 +13,7 @@ const Card = ({
   handleAppliedId,
 }) => {
   return (
-    <motion.li
-      initial={{ opacity: 0.15, scale: 0.85 }}
-      whileInView={{ opacity: 1, scale: 1 }}
+    <li
       id={id}
       className="h-64 w-[22rem] bg-white dark:bg-darkBg rounded-lg shadow-lg flex flex-col items-start justify-center gap-2.5 p-5 relative max-[776px]:w-full max-[425px]:p-4"
     >
@@ -38,7 +35,7 @@ const Card = ({
 
       <Title title={company} styles={"text-lightGrey text-[1.1rem]"} />
       <Title title={location} styles={"text-main text-xl font-bold"} />
-    </motion.li>
+    </li>
   );
 };
 

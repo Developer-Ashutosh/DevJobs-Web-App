@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
 const ThemeBtn = () => {
-  const [theme, setTheme] = useState(document.documentElement.className);
   document.documentElement.className =
     localStorage.theme === "dark" ||
     (!("theme" in localStorage) &&
       window.matchMedia("(prefers-color-scheme: dark)").matches)
       ? "dark"
       : "light";
+  const [theme, setTheme] = useState(document.documentElement.className);
 
   const transform = {
     light: "-translate-x-[1.45rem]",
