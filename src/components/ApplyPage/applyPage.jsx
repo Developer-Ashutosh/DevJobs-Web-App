@@ -1,16 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { PostDetails, Title, Button, P, DetailsCard } from "../index";
+import React, { useState, useEffect, useRef } from "react";
+import { PostDetails, Title, Button, P, DetailsCard, Loader } from "../index";
+import { useParams } from "react-router-dom";
 
-const ApplyPage = ({ id }) => {
+const ApplyPage = () => {
   const [data, setData] = useState({});
-  if (id === null) return null;
+  const params = useParams();
+  const loaderRef = useRef(null);
 
   useEffect(() => {
-    fetch("./data.json")
-      .then((response) => response.json())
-      .then((e) => setData(e.find((data) => data.id === id)))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, [id]);
+    const fetchData = async () => {
+      try {
+        loaderRef.current.style.display = "block";
+        const response = await fetch("./data.json");
+        const fetchedData = await response.json();
+        setData(fetchedData[JSON.parse(params.id) - 1]);
+        loaderRef.current.style.display = "none";
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -73,6 +84,7 @@ const ApplyPage = ({ id }) => {
           listStyle={"list-decimal"}
         />
       </section>
+      <Loader ref={loaderRef} />
     </>
   );
 };

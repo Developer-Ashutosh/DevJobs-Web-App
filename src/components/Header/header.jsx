@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeBtn } from "./components";
+import { ThemeBtn } from "../index";
 
 const Header = () => {
   return (

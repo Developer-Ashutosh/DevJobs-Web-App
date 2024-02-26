@@ -28,10 +28,7 @@ const SearchBar = ({ filterFullTimeJobs, filterJobs }) => {
           name="Full time"
           id="full-time"
           className="h-[1.15rem] w-[1.15rem] outline-none"
-          onInput={(e) => {
-            filterFullTimeJobs(e.target.checked);
-            setFullTime(e.target.checked);
-          }}
+          onInput={(e) => filterFullTimeJobs(e.target.checked)}
         />
         <label
           htmlFor="full-time"
