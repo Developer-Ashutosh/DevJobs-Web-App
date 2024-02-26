@@ -36,7 +36,7 @@ const ApplyPage = () => {
             className="max-w-full scale-[2] max-sm:scale-150"
           />
         </div>
-        <div className="flex flex-col items-center justify-center max-sm:items-start">
+        <div className="flex flex-col items-center justify-center max-sm:items-start max-[425px]:items-center">
           <Title
             title={data.company}
             styles={"text-[1.35rem] font-bold text-primary dark:text-white"}
