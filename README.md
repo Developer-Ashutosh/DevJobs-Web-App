@@ -20,6 +20,10 @@ Welcome to our Developer Jobs Web App UI readme! This UI, built with React JS us
 - **Animation**: Framer Motion
 - **API Integration**: Utilize third-party APIs for fetching job data (if applicable)
 
+## Site URL 🌐
+
+You can access the Planetary Facts App online at [Developer-Ashutosh.github.io/DevJobs-Web-App](https://developer-ashutosh.github.io/DevJobs-Web-App/).
+
 ## Getting Started 🚀
 
 To start developing with our Developer Jobs Web App UI:
