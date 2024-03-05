@@ -1,4 +1,4 @@
-# Developer Jobs Web App (UI with React Router and Framer Motion) 🚀
+# Developer Jobs Web App (UI with React Router) 🚀
 
 Welcome to our Developer Jobs Web App UI readme! This UI, built with React JS using Vite and React Router, is designed to revolutionize the job search experience for developers. With seamless navigation, enhanced user experience, and delightful animations powered by Framer Motion, our platform empowers developers to find their dream jobs effortlessly.
 
